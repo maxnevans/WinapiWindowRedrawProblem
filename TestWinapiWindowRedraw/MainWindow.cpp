@@ -31,13 +31,13 @@ int MainWindow::WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	return 0;
 }
 
-LRESULT CALLBACK MainWindow::internal_WndProc(HWND hWnd, int msg, WORD wParam, LONG lParam) {
+LRESULT CALLBACK MainWindow::internal_WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	MainWindow *c = (MainWindow *)GetWindowLong(hWnd, GWLP_USERDATA);
 
 	if (c == NULL)
-		return DefWindowProc(hWnd, msg, wParam, lParam);
+		return DefWindowProc(hWnd, uMsg, wParam, lParam);
 
-	return c->WndProc(hWnd, msg, wParam, lParam);
+	return c->WndProc(hWnd, uMsg, wParam, lParam);
 }
 
 void MainWindow::CreateWnd() {

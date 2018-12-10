@@ -15,7 +15,7 @@ public:
 
 protected:
 	int WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-	static LRESULT CALLBACK internal_WndProc(HWND hWnd, int msg, WORD wParam, LONG lParam);
+	static LRESULT CALLBACK internal_WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 private:
 
