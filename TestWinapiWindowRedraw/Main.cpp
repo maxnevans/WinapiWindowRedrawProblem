@@ -6,9 +6,11 @@
 
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_ HINSTANCE hInstPrev,_In_opt_ LPWSTR lpCmdLine, _In_ int nCmdShow)
 {
-	MainWindow::Register(hInstance);
+	int res = MainWindow::Register(hInstance);
 
-	MainWindow wnd(hInstance, nCmdShow);
+	DWORD err = GetLastError();
+
+	MainWindow wnd(hInstance);
 	wnd.CreateWnd();
 
 	MSG msg = {0};
