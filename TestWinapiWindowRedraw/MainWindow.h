@@ -8,7 +8,7 @@ public:
 	MainWindow(HINSTANCE hInstance, int nCmdShow);
 	static int Register(HINSTANCE hInstance);
 
-private:
+protected:
 	int WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 private:
